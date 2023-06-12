@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 class Encargado {
     private List<Vehiculo> listaVehiculos;
-    private List<Persona> listaPatentes;
+    private List<Persona> listaPersonas;
 
     public Encargado() {
         listaVehiculos = new ArrayList<>();
-        listaPatentes = new ArrayList<>();
+        listaPersonas = new ArrayList<>();
     }
 
     public void agregarVehiculo() {
@@ -49,7 +49,8 @@ class Encargado {
             String numeroContacto = scanner.next();
 
             Persona persona = new Persona(nombre, apellido, numeroContacto);
-            listaPatentes.add(vehiculoEncontrado.getPatente());
+            listaPersonas.add(persona);
+            persona.setVehiculo(vehiculoEncontrado);
 
             System.out.println("Vehiculo asociado a persona correctamente.");
         } else {
@@ -96,7 +97,7 @@ class Encargado {
             System.out.println("Tipo vehiculo: " + vehiculo.getTipoVehiculo());
             System.out.println("------------------------------");
         }
-        for (Persona persona : listaPatentes) {
+        for (Persona persona : listaPersonas) {
             System.out.println("Contacto: " + persona.getNumeroContacto());
 
             System.out.println("------------------------------");

@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
 class Vehiculo {
     private String color;
@@ -8,6 +5,7 @@ class Vehiculo {
     private String patente;
     public String tipoVehiculo;
     private String horaLlegada;
+    private Persona persona;
 
     public Vehiculo(String color, String marca, String patente, String tipoVehiculo, String horaLlegada) {
         this.color = color;

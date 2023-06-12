@@ -2,6 +2,7 @@ class Persona {
     private String nombre;
     private String apellido;
     private String numeroContacto;
+    private Vehiculo vehiculo;
 
     public Persona(String nombre, String apellido, String numeroContacto) {
         this.nombre = nombre;
@@ -33,5 +34,9 @@ class Persona {
 
     public void setNumeroContacto(String numeroContacto) {
         this.numeroContacto = numeroContacto;
+    }
+
+    public void setVehiculo(Vehiculo vehiculo) {
+        this.vehiculo = vehiculo;
     }
 }
