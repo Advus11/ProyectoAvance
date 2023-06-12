@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 class Encargado {
     private List<Vehiculo> listaVehiculos;
-    private List<String> listaPatentes;
+    private List<Persona> listaPatentes;
 
     public Encargado() {
         listaVehiculos = new ArrayList<>();
@@ -94,6 +94,11 @@ class Encargado {
             System.out.println("Patente: " + vehiculo.getPatente());
             System.out.println("Marca: " + vehiculo.getMarca());
             System.out.println("Tipo vehiculo: " + vehiculo.getTipoVehiculo());
+            System.out.println("------------------------------");
+        }
+        for (Persona persona : listaPatentes) {
+            System.out.println("Contacto: " + persona.getNumeroContacto());
+
             System.out.println("------------------------------");
         }
     }
